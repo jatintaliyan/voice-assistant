@@ -88,17 +88,8 @@ if __name__ == "__main__":
             firefoxPath = "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
             os.startfile(firefoxPath)
 
-        # elif 'email to harry' in query:
-        #     try:
-        #         speak("what should i say")
-        #         content = takeCommand()
-        #         to = "jatintaliyan2@gmail.com"
-        #         sendEmail(to, content)
-        #         speak("Email has been sent!")
-        #     except Exception as e:
-        #         print(e)
-        #         speak("not able to send email")
-        elif 'close' in query:
+
+        elif 'close'or'stop'or'shut' in query:
             speak("good day sir")
             break
-
+input()
