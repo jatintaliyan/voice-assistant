@@ -4,6 +4,7 @@ import speech_recognition as sr
 import wikipedia
 import webbrowser
 import os
+import random
 
 
 engine = pyttsx3.init('sapi5')
@@ -78,7 +79,7 @@ if __name__ == "__main__":
             music_dir = 'D:\\songs'
             songs = os.listdir(music_dir)
             print(songs)
-            os.startfile(os.path.join(music_dir, songs[1]))
+            os.startfile(os.path.join(music_dir, songs[random.randint(0,2)]))
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             print(strTime)
@@ -88,8 +89,14 @@ if __name__ == "__main__":
             firefoxPath = "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
             os.startfile(firefoxPath)
 
+        elif 'mayank ' in query:
+            print('lund le le gandu')
+            speak('mayank ki maa ka bhosda')
 
-        elif 'close'or'stop'or'shut' in query:
+           
+    
+
+        elif 'close' in query:
             speak("good day sir")
             break
-input()
+
