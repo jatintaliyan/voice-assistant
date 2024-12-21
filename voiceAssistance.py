@@ -12,7 +12,7 @@ voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 
 
-gali = ["ki maa ka bhosda","lund le le", "lodu","gandu","chakka","lund se muu ka","aandal","ki dhhii ki chut","chutia"]
+gali = ["ki maa ka bhosda","lund le le", "lodu","gandu","lund se muu ka","aandal","ki dhhii ki chut","chutia"]
 
 def words_to_numbers(text):
     word_to_digit = {
@@ -91,7 +91,7 @@ def takeNumber():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listning...")
-        r.energy_threshold = 100
+        r.energy_threshold = 3000
         r.pause_threshold = 1
         audio = r.listen(source)
     
@@ -150,6 +150,10 @@ if __name__ == "__main__":
         elif 'mayank' in query:
             print('lund le le gandu')
             speak(f"mayank {gali[random.randint(0,9)]}")
+            
+        elif 'anuvansh' in query:
+            print('lund le le gandu')
+            speak(f"Anu vansh {gali[random.randint(0,9)]}")
 
         elif 'manu' in query:
             print('lund le le gandu')
@@ -167,9 +171,17 @@ if __name__ == "__main__":
             print('lund le le gandu')
             speak(f"rajat {gali[random.randint(0,9)]}")
 
+        elif 'hardik' in query:
+            print('lund le le gandu')
+            speak(f"Hardik {gali[random.randint(0,9)]}")
+
         elif 'bhosdi ke' in query:
             print('aukat me')
             speak("lodu gaalii kiisse dee raah")
+
+        elif 'first rule of fight club' in query:
+            print('you do not talk about fight club')
+            speak("you do not talk about fight club")
         
         elif 'search youtube' in query:
             speak("what do you want to search")
@@ -187,3 +199,5 @@ if __name__ == "__main__":
         elif 'close' in query:
             speak("good day sir")
             break
+
+       
